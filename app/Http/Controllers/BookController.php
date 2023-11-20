@@ -16,7 +16,7 @@ class BookController extends Controller
     public function index()
     {
         $books = $this->repository->all();
-         return Inertia::render('Dashboard', [
+         return Inertia::render('BookIndex', [
             'books' => $books->items()
         ]);
     }
