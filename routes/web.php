@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('rent-books', [BookController::class,'index'])->name('rent-books');
     Route::get('rent-book/{id}', [BookController::class,'show'])->name('books.show');
+    Route::post('rent-book/{id}', [RentBookController::class,'store'])->name('rent-book.store');
 });
-Route::post('rent-book/{id}', [RentBookController::class,'rentBook'])->name('rent-book.store');
 
 require __DIR__.'/auth.php';

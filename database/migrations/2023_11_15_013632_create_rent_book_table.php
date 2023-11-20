@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('book_id');
-            $table->timestamp('rent_date')->nullable();
-            $table->timestamp('return_date')->nullable();
+            $table->date('rented_at')->nullable();
+            $table->date('returned_at')->nullable();
             $table->timestamps();
         });
     }

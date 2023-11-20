@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->string('title');
             $table->text('image');
+            $table->boolean('is_rented')->default(false);
             $table->text('description')->nullable();
             $table->string('author');
             $table->timestamps();
