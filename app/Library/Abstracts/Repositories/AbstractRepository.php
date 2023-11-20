@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Products\Abstracts\Repositories;
+namespace App\Library\Abstracts\Repositories;
 
-use App\Products\Abstracts\Interfaces\RepositoryInterface;
+use App\Library\Abstracts\Interfaces\RepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 
 abstract class AbstractRepository implements RepositoryInterface

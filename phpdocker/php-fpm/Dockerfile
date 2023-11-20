@@ -8,6 +8,6 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
 
-RUN echo "extension=mysql" > /etc/php/8.1/fpm/conf.d/mysql.ini
+RUN docker-php-ext-install mysqli pdo pdo_mysql > /etc/php/8.1/fpm/conf.d/mysql.ini
 
 RUN service php8.1-fpm restart

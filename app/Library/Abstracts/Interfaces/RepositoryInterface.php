@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Products\Abstracts\Interfaces;
+namespace App\Library\Abstracts\Interfaces;
 
 interface RepositoryInterface
 {

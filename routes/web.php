@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RentBookController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -33,6 +35,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('rent-books', [BookController::class,'index'])->name('rent-books');
+    Route::get('rent-book/{id}', [BookController::class,'show'])->name('books.show');
 });
+Route::post('rent-book/{id}', [RentBookController::class,'rentBook'])->name('rent-book.store');
 
 require __DIR__.'/auth.php';

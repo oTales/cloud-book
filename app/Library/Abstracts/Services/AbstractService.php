@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Products\Abstracts\Services;
+namespace App\Library\Abstracts\Services;
 
-use App\Products\Abstracts\Interfaces\ServiceInterface;
+use App\Library\Abstracts\Interfaces\ServiceInterface;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Http;
 

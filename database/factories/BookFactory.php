@@ -19,6 +19,7 @@ class BookFactory extends Factory
         return [
             'category_id' => $this->faker->numberBetween(1, 10),
             'title' => $this->faker->sentence(3),
+            'image' => fake()->randomElement(),
             'author' => $this->faker->name(),
             'description' => $this->faker->paragraph(3),
         ];
