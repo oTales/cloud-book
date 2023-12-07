@@ -21,4 +21,9 @@ class RentBookService extends AbstractService
         $data['book_id'] = $bookId;
         return $this->save($data);
     }
+
+    public function deleteRentBook($id)
+    {
+        return $this->delete($id);
+    }
 }

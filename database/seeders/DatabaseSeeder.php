@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
              CategorySeed::class,
              LibrarySeed::class,
              RentBookSeed::class,
-             BookSeed::class
+             BookSeed::class,
+             RoleSeeder::class,
          ]);
 
     }

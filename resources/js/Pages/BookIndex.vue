@@ -15,7 +15,7 @@ defineProps(['books']);
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Livros disponiveis</h2>
         </template>
 
-        <div class="flex gap-10 flex-wrap p-3 justify-center">
+        <div class="flex gap-10 flex-wrap mt-3 mx-auto max-w-7xl items-center justify-center">
             <Books
                 v-for="(book,index) in books"
                 :key="index"

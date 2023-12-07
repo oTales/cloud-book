@@ -23,8 +23,13 @@ class RentBookController extends AbstractController
             'user_id' => 'nullable|integer',
             'book_id' => 'nullable|integer',
             'rented_at' => 'nullable|date',
-            'returned_at' => 'required|date',
+            'returned_at' => 'nullable|date',
         ]);
-        $this->service->saveRentBook($request->toArray(), $request->id,auth()->user()->id);
+         $this->service->saveRentBook($request->toArray(), $request->id,auth()->user()->id);
+    }
+
+    public function destroy($id)
+    {
+        return $this->service->deleteRentBook($id);
     }
 }

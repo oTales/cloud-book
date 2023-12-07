@@ -28,4 +28,12 @@ class BookController extends Controller
             'book' => $book
         ]);
     }
+
+    public function showBooksUser()
+    {
+        $books = $this->repository->showBooksUser(auth()->user()->id);
+        return Inertia::render('BookIndexUser', [
+            'books' => $books->items()
+        ]);
+    }
 }

@@ -19,8 +19,8 @@ class RentBookFactory extends Factory
         return [
             'user_id' => $this->faker->numberBetween(1, 10),
             'book_id' => $this->faker->numberBetween(1, 10),
-            'rent_date' => $this->faker->dateTimeBetween(fake()->date, now()),
-            'return_date' => $this->faker->dateTimeBetween('now', '+1 years'),
+            'rented_at' => $this->faker->dateTimeBetween(fake()->date, now()),
+            'returned_at' => $this->faker->dateTimeBetween('now', '+1 years'),
         ];
     }
 }

@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rent_books', function (Blueprint $table) {
+        Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->foreignId('book_id');
-            $table->enum('status', ['withdrawn', 'awaiting withdrawal','cancel'])->default('awaiting withdrawal');
-            $table->date('rented_at')->nullable();
-            $table->date('returned_at')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rent_books');
+        Schema::dropIfExists('permissions');
     }
 };
